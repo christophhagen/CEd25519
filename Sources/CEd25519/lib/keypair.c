@@ -21,7 +21,7 @@ void ed25519_make_private_key(unsigned char *private_key) {
     private_key[31] |= 64;
 }
 
-void ed25519_create_public_key(unsigned char *public_key, unsigned char *private_key) {
+void ed25519_create_public_key(unsigned char *public_key, const unsigned char *private_key) {
     ge_p3 A;
     ge_scalarmult_base(&A, private_key);
     ge_p3_tobytes(public_key, &A);
