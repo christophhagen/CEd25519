@@ -1,4 +1,4 @@
-#include "ed25519.h"
+#include "CEd25519.h"
 #include "sha512.h"
 #include "ge.h"
 
